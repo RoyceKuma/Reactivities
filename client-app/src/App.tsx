@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+import { Header, List } from 'semantic-ui-react';
+
 
 function App() {
  const [activites, setActivites] =useState([]);
 
  useEffect(() => {
-  axios.get('http://localhost:5000/api/activites').then(response => {
+  axios.get('http://localhost:5000/api/activities').then(response => {
     console.log(response);
     setActivites(response.data);
   })
@@ -16,17 +18,16 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      <ul>
-        {activites.map((activity:any )=> (
-          <li key = {activity.id}>
+    <div >
+     <Header as='h2' icon='users' content = 'Reactivites'/>
+     <List>
+        {activites.map((activity:any)=> (
+          <List.Item key = {activity.id}>
               {activity.title}
-          </li>
+          </List.Item>
         ))}
-      </ul>
-      </header>
+      </List>
+ 
     </div>
   );
 }

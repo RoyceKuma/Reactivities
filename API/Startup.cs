@@ -38,7 +38,7 @@ namespace API
             });
             services.AddDbContext<DataContext>(opt =>
             {
-                opt.UseSqlite(_config.GetConnectionString("DefaultConnections"));
+                opt.UseSqlite(_config.GetConnectionString("DefaultConnection"));
             });
             services.AddCors(opt => {
                 opt.AddPolicy("CorsPolicy", policy => {
