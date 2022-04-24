@@ -15,8 +15,6 @@ function App() {
   })
  }, [])
 
-
-
   return (
     <div >
      <Header as='h2' icon='users' content = 'Reactivites'/>
@@ -26,8 +24,7 @@ function App() {
               {activity.title}
           </List.Item>
         ))}
-      </List>
- 
+      </List> 
     </div>
   );
 }
