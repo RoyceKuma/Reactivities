@@ -28,7 +28,8 @@ namespace Application.Activites
             }
 
             public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken)
-            {
+            { 
+                /*CancellationToken Testing*/
                try 
                {
                        cancellationToken.ThrowIfCancellationRequested();
