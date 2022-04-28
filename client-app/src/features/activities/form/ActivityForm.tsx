@@ -1,7 +1,5 @@
-import { timeEnd } from "console";
 import React, { ChangeEvent, useState } from "react";
 import { Button, Form, Segment } from "semantic-ui-react";
-import { isFunctionTypeNode } from "typescript";
 import { Activity } from "../../../app/models/activity";
 
 interface Props{
